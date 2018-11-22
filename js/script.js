@@ -5,7 +5,7 @@ var gameApp, randomize;
  */
 gameApp = {
   // Get the DOM element to set up the board
-  board: document.getElementById('grid-container'),
+  board: document.querySelector('.grid-container'),
 
   // Function Initialize to start the game on the next step
   init: function() {

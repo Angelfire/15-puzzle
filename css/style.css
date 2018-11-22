@@ -6,66 +6,53 @@ body {
   font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
-h1 {
-  font-size: 69px;
-  margin: 20px 0;
-  text-align: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 1344px;
+  position: relative;
+  width: 1344px;
 }
 
-#puzzle-container {
-  background-color: red;
+.puzzle-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+
+.puzzle-container .game {
+  flex-grow: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.game .grid-container {
+  background-color:#3273dc;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   height: 470px;
   padding: 30px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -265px;
-  margin-left: -265px;
   width: 470px;
-  -webkit-border-radius: 12px 12px 12px 12px;
-  border-radius: 12px;
 }
-#puzzle-container #game-message {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(238, 228, 218, 0.5);
-  z-index: 100;
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
-#puzzle-container #game-message p {
-  font-size: 99px;
-  text-align: center;
-  line-height: 500px;
-}
-#puzzle-container .game-win {
-  display: inline-block !important;
-}
-#puzzle-container #grid-container {
-  position: absolute;
-  z-index: 1;
-}
-#puzzle-container #grid-container .grid-row {
-  margin-bottom: 15px;
-}
-#puzzle-container #grid-container .grid-row:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-#puzzle-container #grid-container .grid-row > div {
+
+.grid-cell {
   background-color: white;
   border-radius: 3px;
-  height: 106.25px;
-  font-size: 55px;
-  line-height: 106.25px;
-  float: left;
-  margin-right: 15px;
-  text-align: center;
-  width: 106.25px;
+  margin: 15px;
+  width: 87px;
 }
-#puzzle-container #grid-container .grid-row .empty {
-  background: none;
+
+.puzzle-container .controlers {
+  flex-grow: 1;
 }
+
