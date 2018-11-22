@@ -31,6 +31,7 @@ body {
 
 .game .grid-container {
   background-color:#3273dc;
+  border-radius: 9px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -45,11 +46,40 @@ body {
   justify-content: space-around;
 }
 
-.grid-cell {
+.grid-row > div {
+  align-items: center;
   background-color: white;
-  border-radius: 3px;
+  border-radius: 9px;
+  display: flex;
+  font-size: 32px;
+  justify-content: center;
   margin: 15px;
   width: 87px;
+}
+
+.grid-row .empty {
+  background-color: transparent;
+}
+
+#game-message {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(238, 228, 218, 0.5);
+  z-index: 100;
+}
+
+#game-message p {
+  font-size: 99px;
+  text-align: center;
+  line-height: 500px;
+}
+
+.game-win {
+  display: inline-block !important;
 }
 
 .puzzle-container .controlers {
