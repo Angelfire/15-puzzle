@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 69px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+#puzzle-container {
+  background-color: red;
+  height: 470px;
+  padding: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -265px;
+  margin-left: -265px;
+  width: 470px;
+  -webkit-border-radius: 12px 12px 12px 12px;
+  border-radius: 12px;
+}
+#puzzle-container #game-message {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(238, 228, 218, 0.5);
+  z-index: 100;
+}
+#puzzle-container #game-message p {
+  font-size: 99px;
+  text-align: center;
+  line-height: 500px;
+}
+#puzzle-container .game-win {
+  display: inline-block !important;
+}
+#puzzle-container #grid-container {
+  position: absolute;
+  z-index: 1;
+}
+#puzzle-container #grid-container .grid-row {
+  margin-bottom: 15px;
+}
+#puzzle-container #grid-container .grid-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+#puzzle-container #grid-container .grid-row > div {
+  background-color: white;
+  border-radius: 3px;
+  height: 106.25px;
+  font-size: 55px;
+  line-height: 106.25px;
+  float: left;
+  margin-right: 15px;
+  text-align: center;
+  width: 106.25px;
+}
+#puzzle-container #grid-container .grid-row .empty {
+  background: none;
+}
